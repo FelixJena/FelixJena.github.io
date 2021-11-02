@@ -8,11 +8,10 @@ var chart = new OrgChart(document.getElementById("orgchart"), {
     nodeBinding: {
         field_0: "name",
         field_1: "voornaam",
-        field_2: "date",
-        field_3: "beschrijving",
+        field_2: "date"
     },
     nodes: [
-        { id: 1, name: "Jena", voornaam: "Felix", date: "14/01/1807-07/08/1876",Beschrijving: "dddd" },
+        { id: 1, name: "Jena", voornaam: "Felix", date: "14/01/1807-07/08/1876", beschrijving: "" },
         { id: 16, pid: 1, tags: ['partner'], name: "Verhulst",voornaam: "Ana Maria",date: "1802-1870" },
         { id: 18, pid: 3, tags: ['partner'] , name: "Delqui",voornaam: "Joanna",date: "" },
         { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834" },                
