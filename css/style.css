@@ -1,9 +1,9 @@
 body {
-    background-color: #e8e8e8;
+    background-color: #29361d;
 }
 
 header {
-    color: white;
+    color: rgb(224, 20, 20);
     background-color: #30303a;
     padding: 0.5rem 1rem 0.5rem 3rem;
 }
@@ -21,7 +21,7 @@ article{
 
 main {
     padding: 2rem;
-    background-color: white;
+    background-color: rgb(186, 226, 203);
     border: 1px solid black;
     z-index: 4;
 }
@@ -52,10 +52,10 @@ a{
 
 th {
     background-color: #30303a;
-    color: white;
+    color: rgb(245, 237, 242);
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: #688356}
 
 table {
     border-collapse: collapse;
@@ -65,4 +65,10 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
+}
+main1 {
+    padding: 2rem;
+    background-color: rgb(119, 10, 10);
+    border: 1px solid black;
+    z-index: 4;
 }

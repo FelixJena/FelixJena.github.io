@@ -31,7 +31,10 @@ main {
     margin: 2rem 5rem 3rem 8rem;
     padding: 2rem;
 }
-
+main1 {
+    margin: 2rem 5rem 3rem 8rem;
+    padding: 2rem;
+}
 .navbar {
     position: fixed;
     background-color: var(--bg-primary);
