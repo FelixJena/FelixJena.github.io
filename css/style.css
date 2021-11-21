@@ -72,3 +72,10 @@ main1 {
     border: 1px solid black;
     z-index: 4;
 }
+
+.jena>rect{
+    fill: #229e79 !important;
+}
+.verhulst>rect{
+    fill: #9e2279 !important;
+}
