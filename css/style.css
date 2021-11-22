@@ -1,5 +1,5 @@
 body {
-    background-color: #29361d;
+    background-color: #59773e;
 }
 
 header {
@@ -21,7 +21,7 @@ article{
 
 main {
     padding: 2rem;
-    background-color: rgb(186, 226, 203);
+    background-color: rgb(212, 235, 222);
     border: 1px solid black;
     z-index: 4;
 }
