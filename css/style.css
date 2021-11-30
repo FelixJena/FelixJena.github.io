@@ -66,11 +66,9 @@ th, td {
     text-align: left;
     padding: 8px;
 }
-main1 {
-    padding: 2rem;
-    background-color: rgb(119, 10, 10);
-    border: 1px solid black;
-    z-index: 4;
+
+h1 {
+    padding-bottom: 1rem;
 }
 
 .jena>rect{
