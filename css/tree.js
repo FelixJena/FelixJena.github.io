@@ -15,6 +15,12 @@ var chart = new OrgChart(document.getElementById("orgchart"), {
 
 var jenatree = null;
 var peeterstree = null;
+var michielstree = null;
+var renderstree = null;
+var demuldertree = null;
+var jenatree = null;
+
+
 window.onload = (event) => {
     jenatree = [
         { id: 1, name: "Jena", voornaam: "Felix", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
@@ -34,6 +40,31 @@ window.onload = (event) => {
         { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
         { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
         { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
+        { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" },        
+        { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
+        { id: 21, pid: 12, tags: ['partner'], name: "Michiels",voornaam: "Constantius",date: "1871"},
+        { id: 22, pid: 13, tags: ['partner'], name: "Renders",voornaam: "Joannes Baptista",date: "23/05/1860"},
+        { id: 23, pid: 14, tags: ['partner'], name: "De Mulder",voornaam: "Joannes",date: ""},
+        { id: 24, pid: 15, tags: ['partner'], name: "Vanderborght",voornaam: "Maria Theresia",date: " "},                 
+              
+        
+        
+        
+    ];
+    
+    peeterstree = [
+        { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
+        { id: 16, pid: 1, tags: ["partner", "Jena"], name: "Verhulst",voornaam: "Anna Maria",date: "1802-1870"}, 
+        { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
+        { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
+        { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
+        { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+        { id: 19, pid: 4, tags: ['partner'], name: "Delmé",voornaam: "Maria Thérésia",date: "1833-09/03/1900" },
+        { id: 10, pid: 4, name: "Jena",voornaam: "Guisbertus Augustinus ",date: "1863-1867" },
+        { id: 11, pid: 4, name: "Jena",voornaam: "Joanna Maria",date: "1865"},
+        { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
+        { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
+        { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
         { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" },
         { id: 17, pid: 11, ppid:20, name: "Peeters",voornaam: "Maria Theresia",date: "20/05/1890-1914" },
         { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
@@ -47,6 +78,21 @@ window.onload = (event) => {
         { id: 28, pid: 11, ppid:20, name: "Peeters",voornaam: "Guilielmus",date: "1904" },
         { id: 29, pid: 11, ppid:20, name: "Peeters",voornaam: "Marie Louize",date: "1909" },
         { id: 30, pid: 17, tags: ['partner'], name: "Storkels",voornaam: "Jan Baptist",date: "1887-1914"},
+    ];
+    michielstree = [
+        { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
+        { id: 16, pid: 1, tags: ["partner", "Jena"], name: "Verhulst",voornaam: "Anna Maria",date: "1802-1870"}, 
+        { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
+        { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
+        { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
+        { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+        { id: 19, pid: 4, tags: ['partner'], name: "Delmé",voornaam: "Maria Thérésia",date: "1833-09/03/1900" },
+        { id: 10, pid: 4, name: "Jena",voornaam: "Guisbertus Augustinus ",date: "1863-1867" },
+        { id: 11, pid: 4, name: "Jena",voornaam: "Joanna Maria",date: "1865"},
+        { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
+        { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
+        { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
+        { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" }, 
         { id: 31, pid: 12, ppid:21, name: "Michiels",voornaam: "Mathilde Amelie Marie ",date: "13/03/1894-19/12/1973 " },
         { id: 32, pid: 12, ppid:21, name: "Michiels",voornaam: "Maria Ludovica",date: "24/04/1897" },
         { id: 33, pid: 12, ppid:21, name: "Michiels",voornaam: "colletta ",date: "1899 " },
@@ -58,32 +104,11 @@ window.onload = (event) => {
         { id: 39, pid: 34, tags: ['partner'], name: " Van Geel",voornaam: "Marie Louise ",date: " "},
         { id: 40, pid: 35, tags: ['partner'], name: "Michiels ",voornaam: "Frans",date: " "},
         { id: 41, pid: 36, tags: ['partner'], name: "Vlaeyen ",voornaam: "Maria Julia",date: " "},
-        { id: 42, pid: 13, ppid:22, name: "Renders",voornaam: "Joanna Marie ",date: "13/08/1896-07/01/1986" },
-        { id: 43, pid: 13, ppid:22, name: "Renders",voornaam: "Constantius ",date: "  " },
-        { id: 44, pid: 13, ppid:22, name: "Renders",voornaam: "Victor ",date: "  " },
-        { id: 45, pid: 13, ppid:22, name: "Renders",voornaam: "Marie Theresia",date: "  " },
-        { id: 46, pid: 13, ppid:22, name: "Renders",voornaam: "Bertha ",date: "  " },
-        { id: 47, pid: 13, ppid:22, name: "Renders",voornaam: "Alfons",date: "  " },
-        { id: 48, pid: 14, ppid:23, name: "De Mulder",voornaam: "Constantius  ",date: "02/05/1899 " },
-        { id: 49, pid: 14, ppid:23, name: "De Mulder",voornaam: "Virginia ",date: "03/02/1901 " },
-        { id: 50, pid: 14, ppid:23, name: "De Mulder",voornaam: " Joris ",date: "27/12/1904 " },
-        { id: 51, pid: 14, ppid:23, name: "De Mulder",voornaam: "Andreas  ",date: "16/08/1907 " },
-        { id: 53, pid: 15, ppid:24, name: "Jena",voornaam: "Petrus Arthur ",date: "08/07/1906-23/06/1948 " },
-        { id: 52, pid: 15, ppid:24, name: "Jenar",voornaam: "Stan ",date: "1904 " },
-        { id: 54, pid: 53, tags: ['partner'], name: "Delblaere ",voornaam: "Martha",date: "1908-2000 "},
-        { id: 55, pid: 53, ppid:54, name: "Jena",voornaam: "Willy  ",date: "1932-2017  " },
-        { id: 56, pid: 53, ppid:54, name: "Jena",voornaam: "Hugo joris ",date: "22/10/1938  " },
-        { id: 57, pid: 53, ppid:54, name: "Jena",voornaam: "Hedwig  ",date: "1946  " },
-        { id: 58, pid: 55, tags: ['partner'], name: "Vloebergh",voornaam: "Irene",date: "1930-2016 "},
-        { id: 59, pid: 55, tags: ['partner'], name: "Dullaerts ",voornaam: "Lilianne",date: ""},
-        { id: 60, pid: 57, tags: ['partner'], name: "Endels ",voornaam: "Lucienne",date: "1948 "},
-        { id: 61, pid: 55, ppid:58, name: "Jena",voornaam: "Dirk  ",date: "  " },
-        { id: 62, pid: 55, ppid:59, name: "Jena",voornaam: "Michaël  ",date: "29-03-1982  " },
-        { id: 63, pid: 61, tags: ['partner'], name: "De Wilde",voornaam: "Ingrid",date: " "},
-        { id: 64, pid: 62, tags: ['partner'], name: "Mullens",voornaam: "Cindy",date: "25/05/1984 "},
-        { id: 65, pid: 61, ppid:63, name: "Jena",voornaam: "Tuur  ",date: "13/07/1986  " },
-        { id: 66, pid: 61, ppid:63, name: "Jena",voornaam: "Fons  ",date: "11/01/1989  " },
-        { id: 67, pid: 62, ppid:64, name: "Jena",voornaam: "Pjotr ",date: " 17/03/2017 " },
+        { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
+        { id: 21, pid: 12, tags: ['partner'], name: "Michiels",voornaam: "Constantius",date: "1871"},
+        { id: 22, pid: 13, tags: ['partner'], name: "Renders",voornaam: "Joannes Baptista",date: "23/05/1860"},
+        { id: 23, pid: 14, tags: ['partner'], name: "De Mulder",voornaam: "Joannes",date: ""},
+        { id: 24, pid: 15, tags: ['partner'], name: "Vanderborght",voornaam: "Maria Theresia",date: " "},
         { id: 68, pid: 31, ppid:37, name: "Vanderveeren",voornaam: "Henricus Jules ",date: "1918-1940 ",beschrijving: "gesneuveld tijdens de 18daagse veldtocht" },
         { id: 69, pid: 31, ppid:37, name: "Vanderveeren",voornaam: "Florentina  ",date: "03/03/1920 " },
         { id: 70, pid: 31, ppid:37, name: "Vanderveeren",voornaam: " Maria ",date: "01/03/1922-09/11/2004 " },
@@ -168,6 +193,35 @@ window.onload = (event) => {
         { id: 149, pid: 92, tags: ['partner'], name: "Torfs",voornaam: "Stijn",date: " "},
         { id: 150, pid: 92, ppid:149, name: "Torfs",voornaam: "Arthur",date: "16/05/2019" },
         { id: 151, pid: 92, ppid:149, name: "Torfs",voornaam: "Victor",date: "30/07/2020" },
+
+    
+    ];
+    renderstree = [
+         { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
+         { id: 16, pid: 1, tags: ["partner", "Jena"], name: "Verhulst",voornaam: "Anna Maria",date: "1802-1870"}, 
+         { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
+         { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
+         { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
+         { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+         { id: 19, pid: 4, tags: ['partner'], name: "Delmé",voornaam: "Maria Thérésia",date: "1833-09/03/1900" },
+         { id: 10, pid: 4, name: "Jena",voornaam: "Guisbertus Augustinus ",date: "1863-1867" },
+         { id: 11, pid: 4, name: "Jena",voornaam: "Joanna Maria",date: "1865"},
+         { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
+         { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
+         { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
+         { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" },
+         { id: 17, pid: 11, ppid:20, name: "Peeters",voornaam: "Maria Theresia",date: "20/05/1890-1914" },
+         { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
+         { id: 21, pid: 12, tags: ['partner'], name: "Michiels",voornaam: "Constantius",date: "1871"},
+         { id: 22, pid: 13, tags: ['partner'], name: "Renders",voornaam: "Joannes Baptista",date: "23/05/1860"},
+         { id: 23, pid: 14, tags: ['partner'], name: "De Mulder",voornaam: "Joannes",date: ""},
+         { id: 24, pid: 15, tags: ['partner'], name: "Vanderborght",voornaam: "Maria Theresia",date: " "},
+         { id: 42, pid: 13, ppid:22, name: "Renders",voornaam: "Joanna Marie ",date: "13/08/1896-07/01/1986" },
+        { id: 43, pid: 13, ppid:22, name: "Renders",voornaam: "Constantius ",date: "  " },
+        { id: 44, pid: 13, ppid:22, name: "Renders",voornaam: "Victor ",date: "  " },
+        { id: 45, pid: 13, ppid:22, name: "Renders",voornaam: "Marie Theresia",date: "  " },
+        { id: 46, pid: 13, ppid:22, name: "Renders",voornaam: "Bertha ",date: "  " },
+        { id: 47, pid: 13, ppid:22, name: "Renders",voornaam: "Alfons",date: "  " },   
         { id: 152, pid: 42, tags: ['partner'], name: "Vandenput",voornaam: "Joannes Alfons",date: " "},
         { id: 153, pid: 42, ppid:152, name: "Vandenput",voornaam: "Valerie ",date: "" },
         { id: 154, pid: 42, ppid:152, name: "Vandenput",voornaam: "Bertha ",date: "" },
@@ -218,16 +272,72 @@ window.onload = (event) => {
         { id: 199, pid: 192, ppid:195, name: "Vande Velde",voornaam: " Joris",date: "" },
         { id: 200, pid: 192, ppid:195, name: "Vande Velde",voornaam: " Mats",date: "" },
     ];
-    
-    peeterstree = [
-        { id: 1, name: "Jef", voornaam: "Peeters", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
-        { id: 16, pid: 1, tags: ["partner", "jena"], name: "Peeters",voornaam: "Brunhilde",date: "1802-1870"}, 
-        { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
-        { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
-        { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
-        { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+        demuldertree = [
+            { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
+            { id: 16, pid: 1, tags: ["partner", "Jena"], name: "Verhulst",voornaam: "Anna Maria",date: "1802-1870"}, 
+            { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
+            { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
+            { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
+            { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+            { id: 19, pid: 4, tags: ['partner'], name: "Delmé",voornaam: "Maria Thérésia",date: "1833-09/03/1900" },
+            { id: 10, pid: 4, name: "Jena",voornaam: "Guisbertus Augustinus ",date: "1863-1867" },
+            { id: 11, pid: 4, name: "Jena",voornaam: "Joanna Maria",date: "1865"},
+            { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
+            { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
+            { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
+            { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" },
+            { id: 17, pid: 11, ppid:20, name: "Peeters",voornaam: "Maria Theresia",date: "20/05/1890-1914" },
+            { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
+            { id: 21, pid: 12, tags: ['partner'], name: "Michiels",voornaam: "Constantius",date: "1871"},
+            { id: 22, pid: 13, tags: ['partner'], name: "Renders",voornaam: "Joannes Baptista",date: "23/05/1860"},
+            { id: 23, pid: 14, tags: ['partner'], name: "De Mulder",voornaam: "Joannes",date: ""},
+            { id: 24, pid: 15, tags: ['partner'], name: "Vanderborght",voornaam: "Maria Theresia",date: " "},  
+            { id: 48, pid: 14, ppid:23, name: "De Mulder",voornaam: "Constantius  ",date: "02/05/1899 " },
+        { id: 49, pid: 14, ppid:23, name: "De Mulder",voornaam: "Virginia ",date: "03/02/1901 " },
+        { id: 50, pid: 14, ppid:23, name: "De Mulder",voornaam: " Joris ",date: "27/12/1904 " },
+        { id: 51, pid: 14, ppid:23, name: "De Mulder",voornaam: "Andreas  ",date: "16/08/1907 " },
+        ];
+        jenatree = [
+            { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
+            { id: 16, pid: 1, tags: ["partner", "Jena"], name: "Verhulst",voornaam: "Anna Maria",date: "1802-1870"}, 
+            { id: 18, pid: 3, tags: ['partner', "jena"] , name: "Delqui",voornaam: "Joanna",date: ""},
+            { id: 2, pid: 1, ppid: 16, name: "Jena",voornaam: "Joanna Maria",date: "1831-1834"},                
+            { id: 3, pid: 1, ppid: 16, name: "Jena",voornaam: "Jan Baptist",date: "02/09/1835-15/02/1910"},
+            { id: 4, pid: 1, ppid: 16, name: "Jena",voornaam: "Guillemin Albertus",date: "08/01/1839-16/04/1887"},
+            { id: 19, pid: 4, tags: ['partner'], name: "Delmé",voornaam: "Maria Thérésia",date: "1833-09/03/1900" },
+            { id: 10, pid: 4, name: "Jena",voornaam: "Guisbertus Augustinus ",date: "1863-1867" },
+            { id: 11, pid: 4, name: "Jena",voornaam: "Joanna Maria",date: "1865"},
+            { id: 12, pid: 4, name: "Jena",voornaam: "Maria Theresia",date: "1866" },
+            { id: 13, pid: 4, name: "Jena",voornaam: "Maria Louisa",date: "21/05/1868" },
+            { id: 14, pid: 4, name: "Jena",voornaam: "Stephania",date: "1879" },
+            { id: 15, pid: 4, name: "Jena",voornaam: "Emile",date: "1878-1958" },
+            { id: 17, pid: 11, ppid:20, name: "Peeters",voornaam: "Maria Theresia",date: "20/05/1890-1914" },
+            { id: 20, pid: 11, tags: ['partner'], name: "Peeters",voornaam: "Francois August",date: "1861"},
+            { id: 21, pid: 12, tags: ['partner'], name: "Michiels",voornaam: "Constantius",date: "1871"},
+            { id: 22, pid: 13, tags: ['partner'], name: "Renders",voornaam: "Joannes Baptista",date: "23/05/1860"},
+            { id: 23, pid: 14, tags: ['partner'], name: "De Mulder",voornaam: "Joannes",date: ""},
+            { id: 24, pid: 15, tags: ['partner'], name: "Vanderborght",voornaam: "Maria Theresia",date: " "}, 
+            { id: 53, pid: 15, ppid:24, name: "Jena",voornaam: "Petrus Arthur ",date: "08/07/1906-23/06/1948 " },
+        { id: 52, pid: 15, ppid:24, name: "Jena",voornaam: "Stan ",date: "1904 " },
+        { id: 54, pid: 53, tags: ['partner'], name: "Delblaere ",voornaam: "Martha",date: "1908-2000 "},
+        { id: 55, pid: 53, ppid:54, name: "Jena",voornaam: "Willy  ",date: "1932-2017  " },
+        { id: 56, pid: 53, ppid:54, name: "Jena",voornaam: "Hugo joris ",date: "22/10/1938  " },
+        { id: 57, pid: 53, ppid:54, name: "Jena",voornaam: "Hedwig  ",date: "1946  " },
+        { id: 58, pid: 55, tags: ['partner'], name: "Vloebergh",voornaam: "Irene",date: "1930-2016 "},
+        { id: 59, pid: 55, tags: ['partner'], name: "Dullaerts ",voornaam: "Lilianne",date: ""},
+        { id: 60, pid: 57, tags: ['partner'], name: "Endels ",voornaam: "Lucienne",date: "1948 "},
+        { id: 61, pid: 55, ppid:58, name: "Jena",voornaam: "Dirk  ",date: "  " },
+        { id: 62, pid: 55, ppid:59, name: "Jena",voornaam: "Michaël  ",date: "29-03-1982  " },
+        { id: 63, pid: 61, tags: ['partner'], name: "De Wilde",voornaam: "Ingrid",date: " "},
+        { id: 64, pid: 62, tags: ['partner'], name: "Mullens",voornaam: "Cindy",date: "25/05/1984 "},
+        { id: 65, pid: 61, ppid:63, name: "Jena",voornaam: "Tuur  ",date: "13/07/1986  " },
+        { id: 66, pid: 61, ppid:63, name: "Jena",voornaam: "Fons  ",date: "11/01/1989  " },
+        { id: 67, pid: 62, ppid:64, name: "Jena",voornaam: "Pjotr ",date: " 17/03/2017 " },
+       
+       
+          
     ];
-    
+
     chart.load(jenatree);
 }
 
@@ -235,6 +345,6 @@ function jena() {
     chart.load(jenatree);
 }
 
-function peeters() {
-    chart.load(peeterstree);    
+function michiels() {
+    chart.load(pmichielstree);    
 }
