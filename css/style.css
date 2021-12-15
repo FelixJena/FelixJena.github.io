@@ -1,10 +1,10 @@
 body {
-    background-color: #59773e;
+    background-color: #585e53;
 }
 
 header {
     color: rgb(224, 20, 20);
-    background-color: #30303a;
+    background-color: #c1c1da;
     padding: 0.5rem 1rem 0.5rem 3rem;
 }
 
@@ -21,7 +21,7 @@ article{
 
 main {
     padding: 2rem;
-    background-color: rgb(212, 235, 222);
+    background-color: rgb(210, 228, 218);
     border: 1px solid black;
     z-index: 4;
 }
