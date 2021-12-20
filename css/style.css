@@ -74,6 +74,21 @@ h1 {
 .jena>rect{
     fill: #229e79 !important;
 }
+
+
 .verhulst>rect{
     fill: #7a3866 !important;
 }
+.oranje>rect{
+    fill:orange !important;
+}
+.rood>rect{
+    fill:red !important;
+}
+.blauw>rect{
+    fill:royalblue !important;
+
+} 
+.grijs>rect{
+    fill:slategray !important;
+}   
