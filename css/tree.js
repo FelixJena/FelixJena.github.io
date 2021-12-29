@@ -134,7 +134,8 @@ window.onload = (event) => {
         { id: 95, pid: 80, ppid:85, name: "Devroye",voornaam: "Wim  ",date: " 01/04/1989 ",tags: ["jena"]  },                
         { id: 96, pid: 81, ppid:86, name: "Vlaeyen",voornaam: "Michiel  ",date: "10/07/1994  ",tags: ["jena"]  },
         { id: 97, pid: 81, ppid:86, name: "Vlaeyen",voornaam: "Thijs  ",date: "03/01/2001",tags: ["jena"]  },
-      
+       
+        
       
         { id: 98, pid: 33, ppid:38, name: "Schroeders",voornaam: "Jules  ",date: "30/04/1920-28/02/1996  ",beschrijving: "doodsbrief," ,tags: ["jena"] },
         { id: 99, pid: 98, tags: ['partner',"oranje"], name: "Teck ",voornaam: "Jeanne",date: " 18/05/1927-14/12/2019 "},
