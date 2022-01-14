@@ -193,9 +193,9 @@ window.onload = (event) => {
         { id: 146, pid: 91, ppid:145, name: "Adriaensen",voornaam: "Fien",date: "07/10/2008",tags: ["jena"]  },
         { id: 147, pid: 91, ppid:145, name: "Adriaensen",voornaam: "Klaar",date: "20/08/2010",tags: ["jena"]  },
         { id: 148, pid: 91, ppid:145, name: "Adriaensen",voornaam: "Nand",date: "10/08/2013" ,tags: ["jena"] },
-        { id: 149, pid: 92, tags: ['partner',"verhulst"], name: "Torfs",voornaam: "Stijn",date: " "},
-        { id: 150, pid: 92, ppid:149, name: "Torfs",voornaam: "Arthur",date: "16/05/2019",tags: ["jena"]  },
-        { id: 151, pid: 92, ppid:149, name: "Torfs",voornaam: "Victor",date: "30/07/2020",tags: ["jena"]  },
+        { id: 149, pid: 87, tags: ['partner',"verhulst"], name: "Schwall",voornaam: "Jan",date: " "},
+        { id: 150, pid: 87, ppid:149, name: "Schwall",voornaam: "William",date: "16/05/2019",tags: ["jena"]  },
+       
     ];
     renderstree = [
          { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
