@@ -89,6 +89,8 @@ h1 {
     fill:royalblue !important;
 
 } 
-.grijs>rect{
-    fill:slategray !important;
+
+
+.paars>rect{
+    fill:rgb(129, 107, 209) !important;
 }   

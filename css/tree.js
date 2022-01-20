@@ -224,7 +224,7 @@ window.onload = (event) => {
         { id: 44, pid: 13, ppid:22, name: "Renders",voornaam: "Victor ",date: "  ",tags: ["jena"] },
         { id: 45, pid: 13, ppid:22, name: "Renders",voornaam: "Marie Theresia",date: "  ",tags: ["jena"] },
         { id: 46, pid: 13, ppid:22, name: "Renders",voornaam: "Bertha ",date: "  ",tags: ["jena"] },
-        { id: 47, pid: 13, ppid:22, name: "Renders",voornaam: "Alfons",date: "  ",tags: ["jena"] },   
+        { id: 47, pid: 13, ppid:22, name: "Renders",voornaam: "Alfons",date: " 19/03/1910-22/04/2000 ",tags: ["jena"] },   
         { id: 48, pid: 42, tags: ['partner',"oranje"], name: "Vandenput",voornaam: "Joannes Alfons",date: " "},
         { id: 49, pid: 42, ppid:48, name: "Vandenput",voornaam: "Valerie ",date: "",tags: ["jena"] },
         { id: 50, pid: 42, ppid:48, name: "Vandenput",voornaam: "Bertha ",date: "",tags: ["jena"] },
@@ -274,6 +274,21 @@ window.onload = (event) => {
         { id: 94, pid: 87, ppid:90, name: "Vande Velde",voornaam: " Laurien",date: "",tags: ["jena"] },
         { id: 95, pid: 88, ppid:91, name: "Vande Velde",voornaam: " Joris",date: "",tags: ["jena"] },
         { id: 96, pid: 88, ppid:91, name: "Vande Velde",voornaam: " Dries",date: "",tags: ["jena"] },
+        { id: 97, pid: 46, tags: ['partner',"geel"], name: "Vandendael ",voornaam: " Leopold",date: " "},
+        { id: 98, pid: 46, ppid:97, name: "Vandendael ",voornaam: " Constant",date: " ",tags: ["jena"]},
+        { id: 99, pid: 46, ppid:97, name: "Vandendael ",voornaam: " Marie Louize",date: " ",tags: ["jena"]},
+        { id: 100, pid: 47, tags: ['partner',"geel"], name: "Debecker ",voornaam: " Louiza",date: " "},
+        { id: 101, pid: 47, ppid:100, name: "Renders ",voornaam: " Roger",date: " ",tags: ["jena"]},
+        { id: 103, pid: 47, ppid:100, name: "Renders ",voornaam: " Gilbert",date: " ",tags: ["jena"]},
+        { id: 104, pid: 47, ppid:100, name: "Renders ",voornaam: " Monique",date: " ",tags: ["jena"]},
+        { id: 102, pid: 101, tags: ['partner',"paars"], name: "Decoster ",voornaam: " Irene",date: " "},
+        { id: 105, pid: 103, tags: ['partner',"paars"], name: "Vandenbempt ",voornaam: " Jeaninne",date: " "},
+        { id: 106, pid: 104, tags: ['partner',"paars"], name: "Goossens",voornaam: " Marcel",date: " "},
+        { id: 107, pid: 101, ppid:102, name: "Renders ",voornaam: " Luc",date: " ",tags: ["jena"]},
+        { id: 108, pid: 103, ppid:105, name: "Renders ",voornaam: " Heidi",date: " ",tags: ["jena"]},
+        { id: 109, pid: 104, ppid:106, name: "Goossens ",voornaam: " Kathleen",date: " ",tags: ["jena"]},
+        { id: 110, pid: 109, tags: ['partner',"paars"], name: "Stordeur",voornaam: " Christophe",date: " "},
+
     ];
     demuldertree = [
         { id: 1, name: "Felix", voornaam: "Jena", date: "14/01/1807-07/08/1876", beschrijving: "", tags: ["jena"]},
@@ -325,10 +340,10 @@ window.onload = (event) => {
         { id: 54, pid: 53, tags: ['partner',"oranje"], name: "Delblaere ",voornaam: "Martha",date: "1908-2000 "},
         { id: 55, pid: 53, ppid:54, name: "Jena",voornaam: "Willy  ",date: "1932-2017  " ,tags: ["jena"]},
         { id: 56, pid: 53, ppid:54, name: "Jena",voornaam: "Hugo joris ",date: "22/10/1938  ",tags: ["jena"] },
-        { id: 57, pid: 53, ppid:54, name: "Jena",voornaam: "Hedwig  ",date: "1946  ",tags: ["jena"] },
+        { id: 57, pid: 53, ppid:54, name: "Jena",voornaam: "Hedwig  ",date: "28/11/1946  ",tags: ["jena"] },
         { id: 58, pid: 55, tags: ['partner',"rood"], name: "Vloebergh",voornaam: "Irene",date: "1930-2016 "},
         { id: 59, pid: 55, tags: ['partner',"blauw"], name: "Dullaerts ",voornaam: "Lilianne",date: ""},
-        { id: 60, pid: 57, tags: ['partner',"grijs"], name: "Endels ",voornaam: "Lucienne",date: "1948 "},
+        { id: 60, pid: 57, tags: ['partner',"grijs"], name: "Endels ",voornaam: "Lucienne",date: "11/11/1948 "},
         { id: 61, pid: 55, ppid:58, name: "Jena",voornaam: "Dirk  ",date: "  ",tags: ["jena"] },
         { id: 62, pid: 55, ppid:59, name: "Jena",voornaam: "Michaël  ",date: "29-03-1982  ",tags: ["jena"] },
         { id: 63, pid: 61, tags: ['partner',"rood"], name: "De Wilde",voornaam: "Ingrid",date: " "},
@@ -336,6 +351,12 @@ window.onload = (event) => {
         { id: 65, pid: 61, ppid:63, name: "Jena",voornaam: "Tuur  ",date: "13/07/1986  ",tags: ["jena"]},
         { id: 66, pid: 61, ppid:63, name: "Jena",voornaam: "Fons  ",date: "11/01/1989  ",tags: ["jena"] },
         { id: 67, pid: 62, ppid:64, name: "Jena",voornaam: "Pjotr ",date: " 17/03/2017 ",tags: ["jena"] },
+        { id: 68, pid: 57, ppid:60, name: "Jena",voornaam: "Johan  ",date: "18/12/1968  ",tags: ["jena"]},
+        { id: 69, pid: 57, ppid:60, name: "Jena",voornaam: "Wim  ",date: "03/05/1973  ",tags: ["jena"]},
+        { id: 70, pid: 68, tags: ['partner',"rood"], name: "craps",voornaam: "Veronique",date: " "},
+        { id: 71, pid: 69, tags: ['partner',"rood"], name: "Swiggers",voornaam: "Elke",date: "25/06/1973 "},
+        { id: 72, pid: 68, ppid:70, name: "Jena",voornaam: "Freya  ",date: "25/09/2000  ",tags: ["jena"]},
+        { id: 73, pid: 69, ppid:71, name: "Jena",voornaam: "JRagne  ",date: "26/02/2004  ",tags: ["jena"]}
     ];
 
     chart.load(jenaoorsprongtree);
