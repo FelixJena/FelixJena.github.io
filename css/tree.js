@@ -353,10 +353,10 @@ window.onload = (event) => {
         { id: 67, pid: 62, ppid:64, name: "Jena",voornaam: "Pjotr ",date: " 17/03/2017 ",tags: ["jena"] },
         { id: 68, pid: 57, ppid:60, name: "Jena",voornaam: "Johan  ",date: "18/12/1968  ",tags: ["jena"]},
         { id: 69, pid: 57, ppid:60, name: "Jena",voornaam: "Wim  ",date: "03/05/1973  ",tags: ["jena"]},
-        { id: 70, pid: 68, tags: ['partner',"rood"], name: "craps",voornaam: "Veronique",date: " "},
+        { id: 70, pid: 68, tags: ['partner',"rood"], name: "Craps",voornaam: "Veronique",date: "19/05/1972"},
         { id: 71, pid: 69, tags: ['partner',"rood"], name: "Swiggers",voornaam: "Elke",date: "25/06/1973 "},
-        { id: 72, pid: 68, ppid:70, name: "Jena",voornaam: "Freya  ",date: "25/09/2000  ",tags: ["jena"]},
-        { id: 73, pid: 69, ppid:71, name: "Jena",voornaam: "JRagne  ",date: "26/02/2004  ",tags: ["jena"]}
+        { id: 72, pid: 68, ppid:70, name: "Jena",voornaam: "Freya  ",date: "25/09/1998  ",tags: ["jena"]},
+        { id: 73, pid: 69, ppid:71, name: "Jena",voornaam: "Ragne  ",date: "26/02/2004  ",tags: ["jena"]}
     ];
 
     chart.load(jenaoorsprongtree);
