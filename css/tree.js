@@ -222,7 +222,7 @@ window.onload = (event) => {
          { id: 42, pid: 13, ppid:22, name: "Renders",voornaam: "Joanna Marie ",date: "13/08/1896-07/01/1986",tags: ["jena"] },
         { id: 43, pid: 13, ppid:22, name: "Renders",voornaam: "Constantius ",date: "  " ,tags: ["jena"]},
         { id: 44, pid: 13, ppid:22, name: "Renders",voornaam: "Victor ",date: "  ",tags: ["jena"] },
-        { id: 45, pid: 13, ppid:22, name: "Renders",voornaam: "Marie Theresia",date: "  ",tags: ["jena"] },
+        { id: 45, pid: 13, ppid:22, name: "Renders",voornaam: "Marie Theresia",date: "1903-1955 ",tags: ["jena"] },
         { id: 46, pid: 13, ppid:22, name: "Renders",voornaam: "Bertha ",date: "  ",tags: ["jena"] },
         { id: 47, pid: 13, ppid:22, name: "Renders",voornaam: "Alfons",date: " 19/03/1910-22/04/2000 ",tags: ["jena"] },   
         { id: 48, pid: 42, tags: ['partner',"oranje"], name: "Vandenput",voornaam: "Joannes Alfons",date: " "},
