@@ -288,7 +288,7 @@ window.onload = (event) => {
         { id: 108, pid: 103, ppid:105, name: "Renders ",voornaam: " Heidi",date: " ",tags: ["jena"]},
         { id: 109, pid: 104, ppid:106, name: "Goossens ",voornaam: " Kathleen",date: "25/08/1975 ",tags: ["jena"]},
         { id: 110, pid: 109, tags: ['partner',"paars"], name: "Stordeur",voornaam: " Christophe",date: " "},
-        { id: 111, pid: 86, tags: ['partner',"rood"], name: " Loris ",voornaam: "VMarie-Josephine",date: " 27/08/1935-06/10/2000"},
+        { id: 111, pid: 86, tags: ['partner',"rood"], name: " Loris ",voornaam: "Marie-Josephine",date: " 27/08/1935-06/10/2000"},
         { id: 112, pid: 95, tags: ['partner',"rood"], name: " Vankerkhoven ",voornaam: "Debbie",date: " "},
         { id: 113, pid: 95, ppid:112, name: "Vande Velde",voornaam: " Mats",date: "23/04/2020",tags: ["jena"] },
         { id: 114, pid: 89, ppid:92, name: "Goossens",voornaam: " Els",date: "06/11/1988",tags: ["jena"] },
